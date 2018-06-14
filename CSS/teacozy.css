@@ -5,11 +5,14 @@ div {
 }
 
 body {
-	color: white; 
 	background-color: black;
 	font-size: 22px;
 	opacity: 0.9;
-	text-color: seashell; 
+	color: seashell; 
+	display: flex; 
+	flex-flow: column nowrap;
+	align-items: center; 
+	font-family: Helvetica; 
 }
  
 /** Navigation **/ 
@@ -19,10 +22,12 @@ body {
 	height: 69px;
 	display: flex;
 	flex-flow: row nowrap;  
-	/**justify-content: flex-start;**/
 	align-items: center; 
 	align-content: center;
-	border-bottom: 1px solid seashell; 
+	border-bottom: 1px solid seashell;
+	position: fixed; 
+	top: 0; 
+	background-color: black;
 }
 
 .nav_left { 
@@ -64,7 +69,6 @@ body {
 	flex-flow: column wrap; 
 	align-items: center; 
 	width: 1200px; 
-	margin: 0 15%; 
 	
 }
 
@@ -94,12 +98,106 @@ body {
 	justif-content: center; 
 	text-align: center; 
 }
-.image_boxes {
+.tea_month p {
+	text-align: center; 
+	color: inherit;
+	margin: 10px 0px; 
+	
+}
+.tea_text {
+	text-align: center;
+	width: inherit;
+}
+
+/** Images: Tea of the Month **/ 
+
+.tea_boxes {
 	display: flex; 
 	flex-flow: row wrap; 
 	justify-content: space-around; 
+	margin-bottom: 40px;
 }
-.boxes { 
-	width: 300px; 
+.blitz_tea {
+	background-image: url("../Resources/Images/img-berryblitz.jpg");
+	background-size: cover; 
+	width: 300px;
 	height: 200px; 
+	margin-bottom: 25px;
+}
+.rum_tea {
+	background-image: url("../Resources/Images/img-spiced-rum.jpg");
+	background-size: cover; 
+	width: 300px;
+	height: 200px; 
+	margin-bottom: 25px;
+}
+.donuts {
+	background-image: url("../Resources/Images/img-donut.jpg");
+	background-size: cover; 
+	width: 300px;
+	height: 200px; 
+	margin-bottom: 25px;
+}
+.myrtle_tea {
+	background-image: url("../Resources/Images/img-myrtle-ave.jpg");
+	background-size: cover; 
+	width: 300px;
+	height: 200px; 
+	margin-bottom: 25px;
+}
+.bedford_tea {
+	background-image: url("../Resources/Images/img-bedford-bizarre.jpg"); 
+	background-size: cover; 
+	width: 300px;
+	height: 200px; 
+	margin-bottom: 25px;
+}
+.location_img {
+	width: 100%;
+	height: 500px;
+	background-image: url("../Resources/Images/img-locations-background.jpg"); 
+	background-size: cover;
+	display: flex; 
+	flex-flow: row wrap; 
+	justify-content: center;
+	align-items: center;  
+}
+.location_img h1 { 
+	width: 100%;
+	height: auto;
+	text-align: center; 
+}
+
+.location_boxes {
+	display: flex; 
+	flex-flow: row wrap; 
+	justify-content: center; 
+}
+.black_boxes {
+	width: 300px; 
+	height: auto;
+	background-color: black; 
+	margin: 0px 20px;
+}
+
+.black_boxes h3 {
+	text-align: center; 
+	line-height: 40px; 
+	font-size: 1.175rem; 
+}
+
+/** Footer **/
+
+.contact {
+	text-align: center; 
+	height: 200px; 
+	width: 100%;
+}
+.footer{ 
+width: 100%; 
+height: auto; 
+}
+.footer p {
+	padding-left: 20px;
+	text-align: left;
 }
