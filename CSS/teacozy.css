@@ -4,15 +4,19 @@ div {
 	border: 1px solid white; 
 }
 
-body {
-	background-color: black;
-	font-size: 22px;
-	opacity: 0.9;
-	color: seashell; 
-	display: flex; 
-	flex-flow: column nowrap;
-	align-items: center; 
+
+html {
 	font-family: Helvetica; 
+	font-size: 22px;
+	color: seashell;
+	background-color: black;
+	opacity: 0.9; 
+}
+
+body {
+	display: flex; 
+	flex-flow: column wrap;
+	align-items: center; 	
 }
  
 /** Navigation **/ 
@@ -23,15 +27,14 @@ body {
 	display: flex;
 	flex-flow: row nowrap;  
 	align-items: center; 
-	align-content: center;
-	border-bottom: 1px solid seashell;
 	position: fixed; 
-	top: 0; 
+	top: 0;
+	border-bottom: 1px solid seashell;
 	background-color: black;
 }
 
 .nav_left { 
-	width: 70%;
+	width: 75%;
 	height: 50px; 
 	display: flex; 
 	flex-flow: row nowrap; 
@@ -40,26 +43,25 @@ body {
 	padding-left: 10px; 
 }
 
-.nav_right {
-	width: 30%; 
-	height: auto; 
+.nav_right { 
+	height: auto;
+	width: inherit;
 	display: flex; 
-	flex-flow: row nowrap; 
-	justify-content: space-between; 
+	flex-flow: row wrap; 
+	align-items: center;
+	justify-content: flex-end;
+	align-content: space-between;
+	padding-left: 10px;
 }
+
 .nav li{
-	width: auto; 
-	height: inherit; 
-	color: white; 
+	width: inherit; 
+	height: inherit;  
 	list-style-type: none; 
 	text-decoration: underline; 
-	font-size: 1.5rem; 
-	display: flex; 
-	flex-flow: row nowrap; 	
-	justify-content: flex-end;
-	justify-content: space-between;
+	font-size: 1rem; 
 	float: right;
-	padding: 0px 30px;
+	margin-left: 15px;
 }
 
 /** Header **/ 
@@ -69,8 +71,9 @@ body {
 	flex-flow: column wrap; 
 	align-items: center; 
 	width: 1200px; 
-	
 }
+
+/** Mission **/
 
 .mission_img {
 	width: inherit;
@@ -86,10 +89,15 @@ body {
 .mission {
 	background-color: black; 
 	text-align: center;
-	font-family: Helvetica; 
-	font-weight: bold; 
+	font-family: Helvetica;  
 	width: 1200px; 
 }
+
+h2, h4, p {
+	color: seashell;
+}
+
+/** Tea of the Month **/
 
 .tea_month {
 	width: 1000px; 
@@ -122,36 +130,42 @@ body {
 	background-size: cover; 
 	width: 300px;
 	height: 200px; 
-	margin-bottom: 25px;
+	display: flex; 
+	flex-flow: column nowrap; 
+	align-items: center;
+}
+
+p{
+	color: seashell;
+	margin-top: 10px;
 }
 .rum_tea {
 	background-image: url("../Resources/Images/img-spiced-rum.jpg");
 	background-size: cover; 
 	width: 300px;
 	height: 200px; 
-	margin-bottom: 25px;
 }
 .donuts {
 	background-image: url("../Resources/Images/img-donut.jpg");
 	background-size: cover; 
 	width: 300px;
 	height: 200px; 
-	margin-bottom: 25px;
 }
 .myrtle_tea {
 	background-image: url("../Resources/Images/img-myrtle-ave.jpg");
 	background-size: cover; 
 	width: 300px;
 	height: 200px; 
-	margin-bottom: 25px;
 }
 .bedford_tea {
 	background-image: url("../Resources/Images/img-bedford-bizarre.jpg"); 
 	background-size: cover; 
 	width: 300px;
 	height: 200px; 
-	margin-bottom: 25px;
 }
+
+/** Location **/
+
 .location_img {
 	width: 100%;
 	height: 500px;
@@ -164,7 +178,6 @@ body {
 }
 .location_img h1 { 
 	width: 100%;
-	height: auto;
 	text-align: center; 
 }
 
@@ -173,6 +186,15 @@ body {
 	flex-flow: row wrap; 
 	justify-content: center; 
 }
+.boxes{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: stretch;
+	margin-top: 15px;
+}
+
+
 .black_boxes {
 	width: 300px; 
 	height: auto;
@@ -183,7 +205,7 @@ body {
 .black_boxes h3 {
 	text-align: center; 
 	line-height: 40px; 
-	font-size: 1.175rem; 
+	font-size: .75rem; 
 }
 
 /** Footer **/
